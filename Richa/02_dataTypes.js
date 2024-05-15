@@ -1,4 +1,4 @@
-"use strict"; // treat all JS code as new version of js
+"use strict"; // treate all JS code as new version of js
 
 // alert("hello")//we are using nodejs, not browser so yeh yaha work ni krega
 console.log("Richa") // code readability should be high
@@ -8,7 +8,7 @@ let age = 18
 let isLoggedIn = false
 // data types:---
 //number range => 2 to the power of 53 tk ki hi value leskte h usse jyada ni
-//bigint :- this data type used in making big wedsites like stockmarket and youbute etc
+//bigint :- this data type used in making big websites like stockmarket and youtube etc
 //string => ""
 //boolean => true/false
 //null => standalone value , it is representation of empty value isme hm intentionally bolte h ki wo undifined ni h wo khali h
