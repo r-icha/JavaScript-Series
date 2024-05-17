@@ -34,5 +34,7 @@ console.log(url.includes('sham'));
 
 console.log(gameName.split('-'));// yeh hmari string ko wahan se split kregi yahn yeh - symbol hoga aur ek array ke form m output degi
 
+// learn other string methods because these methods are very importants
+
 
 
