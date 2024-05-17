@@ -30,7 +30,7 @@ This syntax is for Objects*/
 
 // the below syntax is for also Objects when we store our object in variable
 let myObj = {
- name: "Richa",
+ name: "Richa", 
 age: 24,
 }
 //Function -- Function(){} -> this is the definition of function and if we want to add this function in variable then the below synatx we use
@@ -73,6 +73,7 @@ let userOne = {
 
 let userTwo = userOne
 
-userTwo.email = "hitesh@google.com"
+userTwo.email = "hitesh@google.com" // objects ko hm dot se hi excess krte hain userTwo.email
 console.log(userOne.email);
 console.log(userTwo.email);
+// Heap m jaenge toh hmari original value m hi changes honge
