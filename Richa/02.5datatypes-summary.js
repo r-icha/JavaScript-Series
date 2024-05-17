@@ -47,13 +47,13 @@ console.log(typeof score);
 
 console.log(typeof myfunction); // output is function but isko object function bolte hain
 
-console.log(typeof id); // symbol ka type of symbol hi aaata h
+console.log(typeof id); // symbol ka typeof symbol hi aaata h
 
-console.log(typeof heros); // array ka return type nhi object hi aata h
+console.log(typeof heros); // array ka return type bhi object hi aata h
 
 // jitne bhi non primitive type h sbka return type object hi aata h
 
-// JavaScript is dynamically typed language or statically typed language? ----
+// JavaScript is dynamically typed language or statically typed language? ---- Dynamically typed language (Dynamically-typed languages are those (like JavaScript) where the interpreter assigns variables a type at runtime based on the variable's value at the time).
 
 
 //**************MEMORY***********************************************//
