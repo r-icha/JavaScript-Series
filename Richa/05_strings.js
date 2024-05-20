@@ -7,7 +7,7 @@ console.log(name + repoCount + " value"); // this is the old syntax
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); 
 
 //declaration of sting aise bhi ho skta h
-const gameName = new String('rich-ac')
+const gameName = new String('rich-ac') // is line ko chrome m -inspect-console-m likhenge and uske bd gameName likhenge toh hm string ke sare methods ko dekh skte h 
 console.log(gameName);
 console.log(gameName[0]);
 console.log(gameName.length);
