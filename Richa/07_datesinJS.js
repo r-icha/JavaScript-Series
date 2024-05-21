@@ -7,3 +7,5 @@ console.log(typeof myDate);// this is an interview question and OUTPUT is Object
 
 let myCreatedDate = new Date(2023, 0, 23)
 console.log(myCreatedDate.toDateString());// moths jo h javascript le andar ero se start hote hain
+let myCreatedDate1 = new Date(2024, 0, 23, 5, 3)
+console.log(myCreatedDate1.toLocaleString());
