@@ -3,7 +3,7 @@ const name ="richa"
 const repoCount = 20
 console.log(name + repoCount + " value"); // this is the old syntax
  
-// we use backticks -> that is near button to 1, is new way se strinko ko likhne ko string interpolation bolte h hm isme  bnate h direct place holders unke andar jo bhi variable h usko direct inject krskte hain
+// we use backticks -> that is near button to 1, is new way se string ko ko likhne ko string interpolation bolte h hm isme  bnate h direct place holders unke andar jo bhi variable h usko direct inject krskte hain
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); 
 
 //declaration of sting aise bhi ho skta h
@@ -28,7 +28,7 @@ console.log(newStringOne.trim()); // trim ko hm use krte h starting and ending s
 const url = "https://richa.com/richa%20chaudhary"
 console.log(url.replace('%20', '-'));// here we replace %20 from - then we use this replace('value that we want to change', 'new value') string method
 
-console.log(url.includes('richa'));// if we want to know that is this word or something is present on our url or notthen we use includes() string method
+console.log(url.includes('richa'));// if we want to know that is this word or something is present on our url or not then we use includes() string method
 
 console.log(url.includes('sham'));
 
