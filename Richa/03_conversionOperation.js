@@ -1,5 +1,5 @@
 let score = 33
-console.log(typeof score);
+console.log(typeof score); 
 console.log(typeof(score));
 
 let score1 = "33"
@@ -53,7 +53,7 @@ let someNumber = 3
 let stringNumber = String(someNumber)
 console.log(stringNumber); // it gives output 3
 console.log(typeof stringNumber); // here we check the type of someNumber that is string 
-// the conclusion is the is gives number but it is a string.
+// the conclusion is the is gives number but it is a string type.
 
 // **************** Operations ****************
 
