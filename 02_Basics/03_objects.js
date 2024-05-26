@@ -25,3 +25,28 @@ console.log(JsUser["email"])// isko hm
 console.log(JsUser["full name"]);// full name ke liye aise hoga 
 console.log(JsUser.mySym);
 console.log(typeof JsUser.mySym);// its data type is string but we initialize mySym as symbol so this is the problem
+
+const mySym1 = Symbol("Key2")
+const JsUser1 = {
+name: "sham",
+age: 24,
+location: "jogia",
+[mySym1]: "mykey2",
+}
+console.log(JsUser1[mySym1]);
+console.log(typeof JsUser1.mySym1);
+
+// value change kaise krte h
+JsUser.email = "hitesh@gmail.com"
+
+// agar hm chahate h ki hmare object ki value ko koi change na kr ske to hm usko freeze krdenge
+Object.freeze(JsUser)
+JsUser.email = "hitesh@microsoft.com"
+
+console.log(JsUser);
+console.log(JsUser1);
+
+JsUser.greeting = function(){
+    console.log("Hello Js ");
+}
+console.log(JsUser.greeting);
