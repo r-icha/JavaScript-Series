@@ -28,14 +28,14 @@ console.log(typeof JsUser.mySym);// its data type is string but we initialize my
 
 const mySym1 = Symbol("Key2")
 
-/*const JsUser1 = {
+const JsUser1 = {
 name: "sham",
 age: 24,
 location: "jogia",
 [mySym1]: "mykey2",
 }
 console.log(JsUser1[mySym1]);
-console.log(typeof JsUser1.mySym1);*/
+console.log(typeof JsUser1.mySym1);
 
 // value change kaise krte h
 JsUser.email = "hitesh@gmail.com"
