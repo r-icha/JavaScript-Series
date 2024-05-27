@@ -27,14 +27,15 @@ console.log(JsUser.mySym);
 console.log(typeof JsUser.mySym);// its data type is string but we initialize mySym as symbol so this is the problem
 
 const mySym1 = Symbol("Key2")
-const JsUser1 = {
+
+/*const JsUser1 = {
 name: "sham",
 age: 24,
 location: "jogia",
 [mySym1]: "mykey2",
 }
 console.log(JsUser1[mySym1]);
-console.log(typeof JsUser1.mySym1);
+console.log(typeof JsUser1.mySym1);*/
 
 // value change kaise krte h
 JsUser.email = "hitesh@gmail.com"
@@ -44,9 +45,20 @@ Object.freeze(JsUser)
 JsUser.email = "hitesh@microsoft.com"
 
 console.log(JsUser);
-console.log(JsUser1);
+//console.log(JsUser1);
+
+
+
+//+++++++++++ From here i will learn again +++++++
 
 JsUser.greeting = function(){
     console.log("Hello Js ");
 }
-console.log(JsUser.greeting);
+
+JsUser.greeting2 = function(){
+    console.log(`Hello JS user, ${this.name}`);
+}
+
+console.log(JsUser.greeting());
+
+console.log(JsUser.greeting2());
