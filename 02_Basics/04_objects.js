@@ -38,7 +38,7 @@ console.log(obj4);// we use this syntax
 // assign ke through hm objects ko assign krskte h
 const obj5 = Object.assign({}, obj1, obj2)//syntax to merge two objects here {} is empty object ko target manlenge aur baki obj1 , obj2 ko source manlenge yeh syntax jyada acha h. {} yeh optinal parameter hota h. yeh {} ni denge toh sari value obj1 m hi jaengi
 console.log(obj5)
-
+  
 // we always use the below sybtax in our code
 const obj6 = {...obj1, ...obj2}// sari values ko spread kiya h phle phir obj6 m combined kiya h
 console.log(obj6);
@@ -67,5 +67,5 @@ console.log(Object.values(tinderUser));// output--[ '12abc', 'sham', false ] ism
 console.log(Object.entries(tinderUser));// output-- [ [ 'id', '12abc' ], [ 'name', 'sham' ], [ 'isLoggedIn', false ] ]
 
 //kya hmare pass yeh value h ya ni usko check krna h toh hm below syntax ko use krenge
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));// true
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));// true dega kyunki isse hm check krte h ki isLoggedIn naam ki koi value h kya ya nahi
 console.log(tinderUser.hasOwnProperty('isLogged'));// false
