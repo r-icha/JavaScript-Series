@@ -25,25 +25,25 @@ const regularUser = {
 // objects ko excess dot ke sth krte hain
 console.log(regularUser.fullname);
 console.log(regularUser.fullname.userfullname);
-console.log(regularUser.fullname.userfullname.firstname);
+console.log(regularUser.fullname.userfullname.firstname); // hme hmare object ki jitni nesting open krni h utne dots lgate jaenge
 
 //-------how can we merge two objects---------
-const obj1 = {1: "a", 2: "b"} // isko console m krenge toh object ke bhhut sare method mil jaenge
+const obj1 = {1: "a", 2: "b"} // isko console m krenge toh object ke bhhut sare method mil jaenge here keys are numbers and values are string.
 const obj2 = {3: "a", 4:"b"}
-const obj3 = { obj1, obj2 }// syntax to merge two objects
+const obj3 = { obj1, obj2 }// syntax to merge two objects isme ek problem aayegi ki object ke andar object aayega 
 console.log(obj3);
 const obj4 = Object.assign(obj1, obj2)
-console.log(obj4);
+console.log(obj4);// we use this syntax 
 
 // assign ke through hm objects ko assign krskte h
-const obj5 = Object.assign({}, obj1, obj2)//syntax to merge two objects here {} is empty object ko target manlenge aur baki obj1 , obj2 ko source manlenge yeh syntax jyada acha h
+const obj5 = Object.assign({}, obj1, obj2)//syntax to merge two objects here {} is empty object ko target manlenge aur baki obj1 , obj2 ko source manlenge yeh syntax jyada acha h. {} yeh optinal parameter hota h. yeh {} ni denge toh sari value obj1 m hi jaengi
 console.log(obj5)
 
-// we always use the above sybtax in our code
-const obj6 = {...obj1, ...obj2}// sari values ko split kiya h phle phir obj6 m combined kiya h
+// we always use the below sybtax in our code
+const obj6 = {...obj1, ...obj2}// sari values ko spread kiya h phle phir obj6 m combined kiya h
 console.log(obj6);
 
-//data base se value aayegi tb hm jo syntax use krenge
+//data base se value aayegi tb hm jo syntax use krenge-- Array ke andar bhut  sare objects hain
 
 const users = [
     {
