@@ -69,3 +69,34 @@ console.log(Object.entries(tinderUser));// output-- [ [ 'id', '12abc' ], [ 'name
 //kya hmare pass yeh value h ya ni usko check krna h toh hm below syntax ko use krenge
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));// true dega kyunki isse hm check krte h ki isLoggedIn naam ki koi value h kya ya nahi
 console.log(tinderUser.hasOwnProperty('isLogged'));// false
+
+// object ki destructuring krke value leni hogi
+const course={
+    coursename: "Js",
+    price: "999",
+    courseInstructor: "hitesh sir"
+}
+//course.courseInstructor
+
+const {courseInstructor} = course // syntax for destructuring
+console.log(courseInstructor);
+
+//+++++++++++++++++++++++ APIs +++++++++++++++
+
+/* this is the Json syntax
+{
+    "name": "hitesh",
+    coursename: "Js in hindi",
+    "price": "free"
+}
+*/
+
+// json formater tool - use krenge APi ke liye
+
+/* APIs kayi bar Array ke format m bhi milti h jiska syntax yeh h jisme array ke andar objects hote h bhut sare
+[
+    {},
+    {},
+    {}
+]
+*/
