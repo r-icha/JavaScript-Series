@@ -9,7 +9,8 @@ function sayMyName(){
     console.log("A");
 }
 sayMyName() // sayMyName is reference of function and if we want to execute our function than we use () and () is the execution.
-//----------------
+
+//-------This function is made by myself---------
 function addNumbers(){
    const a = 1
    const b = 2
@@ -17,6 +18,7 @@ function addNumbers(){
    console.log(c) ; 
 }
 addNumbers()
+
 //-----------
 function addTwoNumbers(number1, number2)/*number1 and Number2 are parameters . jb hm function ki defination bnate h usme jo bhi input lete hain usko parameter bolte hain */{
 console.log(number1 + number2);
@@ -61,9 +63,6 @@ console.log("REsult2 is:", result2);
  console.log(loginUserMessage(" ") ); // just logged in - jb hm empty string denge tb
  console.log(loginUserMessage() );// output:- undefined just logged in jb hm kuch bhi ni denge toh argument m undefined aayega null nahi
 
- //-------
-
-
  
  // -----------
 function loginUserMessage1(username1){
@@ -92,7 +91,7 @@ console.log(loginuserMessage3("Richa")); //argument m value denge toh jo value d
 //if(username1 === undefined ) {} and if(!username3) {} both are same
 
 
-// like shping cart jisme hme pta hi ni hota h ki kitne items user add krregA TOH -- jahan hme pta ni hota h ki kitni arguments aane wale toh us hisab se hme apne parameters taiyar krne hote h
+// like shoping cart jisme hme pta hi ni hota h ki kitne items user add krregA TOH -- jahan hme pta ni hota h ki kitni arguments aane wale toh us hisab se hme apne parameters taiyar krne hote h
 function calculateCartPrice(num5){
 return num5
 }
@@ -122,5 +121,20 @@ function calculateCartPrice1(...num6){
             console.log(`username is ${anyobject.username6} and price is ${anyobject.price}`);
         }
         handleObject(user)
+
+        //+++++++hum direct bhi object pass krskte h and below is the syntax ++++++++
+        handleObject({
+            username6: "sham",
+            price: 399
+        })
+
+        // ++++ array ko function m kaise use krenge
+
+        const myNewArray = [200, 400, 100, 600]
+        function returnSecondValue(getArray){
+            return  getArray[1]// myNewArray ke aage [] yeh bracket ni lgaenge hme dekhna h hmara parameter kya h uske aage yeh [] lgaenge aur value jo return krni h wo de denge
+        }
+        console.log(returnSecondValue(myNewArray));// myNewArray pass kiya h yahan
+        console.log(returnSecondValue([200, 500, 600, 100]));// aise bhi value de skte h array ki
 
         
