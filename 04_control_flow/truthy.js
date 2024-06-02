@@ -24,13 +24,13 @@ function(){} :-this function is also a truthy value. this function is called emp
 */
 
 
-//----------
+//-----array empty h ya ni kaise check kreneg-----
 const userEmail1 = [] 
 if(userEmail1.length === 0){
   console.log("Array is empty");
 }
 
-//------------------
+//------ object empty h ya ni kaise check krenge------------
 const emptyobj = {}
 if(Object.keys(emptyobj).length === 0){
 console.log("Object is empty");
