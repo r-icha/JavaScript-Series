@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color:azure ;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+   const parent = document.querySelector('.parent')
+   console.log(parent); // aise parent ke andar sari value milti hai
+
+//    parent ke andar kitne children mile hain
+//    console.log(parent.children);
+// in inspect HTMLCollection jo ki rray jaisi property h
+
+// How to execess
+//    console.log(parent.children[1]); // in inspect it will give --- <div class="day">Tuesday</div>
+//    console.log(parent.children[1].innerHTML); // in inspect it give --- Tuesday
+
+   for(let i=0; i<parent.children.length; i++){
+    console.log(parent.children[i].innerHTML);
+   } // it prints the value monday tuesday wednesday thursday
+parent.children[1].style.color = "orange"
+
+//here we move parent to child
+console.log(parent.firstElementChild);  // in inspect it gives --- <div class="day">Monday</div>
+console.log(parent.lastElementChild);  // in inspectt it select the last child ---- <div class="day">Thursday</div>
+
+//we can also move from child to parent
+const dayOneee = document.querySelector('.day')
+console.log(dayOneee); // Monday
+console.log(dayOneee.parentElement); // it gives in inspect <div class="parent">
+        //<div class="day">Monday</div>
+        //<div class="day">Tuesday</div>
+       // <div class="day">Wednesday</div>
+        //<div class="day">Thursday</div>
+    //</div>
+//we can also select sibling
+console.log(dayOneee.nextElementSibling);  // <div class="day" style="color: orange;">Monday</div>
+
+console.log("NODES: ", parent.childNodes);
+</script>
+</html>
+

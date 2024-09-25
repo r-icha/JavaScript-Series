@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOm learning</h1>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+<input type="password" name="" id="">
+<ul>
+    <li class="list-item">One</li>
+    <li class="list-item">Two</li>
+    <li class="list-item">Three</li>
+    <li class="list-item">Four</li>
+</ul>
+    </div>
+</body>
+</html>
+
+<!-- 
+document.getElementById('title')
+<h1 id="title" class="heading">DOm learning</h1>
+
+
+
+-->
+
+<!--   How to  select one individual element
+document.querySelector() :- It always select the first value
+
+document.querySelector('h2') // it gives the value of first h2
+<h2>Lorem ipsum dolor sit.</h2>
+
+document.querySelector('#title') //
+<h1 id="title" class="heading">...</h1>
+document.querySelector('.heading')
+<h1 id="title" class="heading">...</h1>
+document.querySelector('input[type="password"]')  //css-selectors  
+<input type="password" name id data-dashlane-rid="e252f14fa2c66f2f" data-form-type="password" data-kwimpalastatus="alive" data-kwimpalaid="1685628477907-0">
+
+document.querySelector('ul') // it selects the first un ordered list
+<ul>...</ul>
+const myul = document.querySelector('ul') // we store it in the variable - myul
+myul.querySelector('li')  // it selects first  list
+<li>one</li>
+
+const turnGreen = myul.querySelector('li')
+turnGreen.style.background = "green" // we want to 
+'green'
+
+turnGreen.innerText
+'one'
+turnGreen.innerText = "five"
+'five'
+
+-->
+
+
+
+<!-- 
+document.querySelectorAll() :- it selects the whole value
+
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]
+NodeList is not the pure array. NodeList does not hold map functions etc but it has foreach
+
+
+tempLiList.style.color = 'green' // it is not working here bcoz it is a node List
+but we do this in the way
+tempLiList[0].style.color = 'green'
+'green'
+
+const myH1 = document.querySelectorAll('h1')
+myH1
+NodeList [h1]
+here if we want to give color green like:--- myH1.style.color = 'green' then it is not possibel it gives errors because hme nodeList Mili h naki array
+here btana pdega ki konsa element green krna h myH1[0].style.color = 'green'
+
+tempLiList.forEach(function (l) {
+l.style.backgroundColor = 'green'})
+yeh poori list ko green color krdega
+ jb bhi NodeList pr kaam kro toh always try kro ki forEach use kren because yeh array i h toh we can't use map
+
+-->
+
+
+
+<!-- 
+document.getElementsByClassName('list-item')
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item ]
+
+const temoClassList =  document.getElementsByClassName('list-item')
+const tempClassList.forEach(function (li) {
+console.log(li)
+})
+this gives error
+
+we have to convert HTMLCollection into Array
+Array.from(tempClassList) => with the help of this we convert HTMLCollection into Array
+now we can use forEach, Map etc 
+
+const myConvertedArray = Array.from(tempClassList)
+
+myConvertedArray.forEach(function (li) {
+li.style.color = 'orange';
+li.style.backgroundColor = "pink";
+})
+when we run this then it will turn the list items color orange and background color is pink
+
+
+-->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color:azure ;">
+    
+</body>
+
+<script>
+const div = document.createElement('div')
+console.log(div);  //<div></div>
+
+div.className = "main"  // <div class="main"></div>
+div.id = Math.random()*10 //   <div class="main" id="1.595681888"></div>
+  
+div.setAttribute("title", "generated title")  // <div class="main" id="9.718141291924603" title="generated title"></div>
+div.style.backgroundColor = "green" //<div class="main" id="9.718141291924603" title="generated title" style="background-color: green;"></div>
+div.style.padding = "12px"
+
+// with the help of this we can attact this to the document
+const addText = document.createTextNode("Richa")
+div.appendChild(addText) 
+document.body.appendChild(div) // attach to document iski help se Rich HME Min screen pr dikhegA
+
+</script>
+</html>
