@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body>
+    <div id="images">
+        <h1>Amazing Images</h1>
+        <ul>
+            <li><img width="200px" id="one" src="./Richa.jpg" alt=" "></li>
+            <li id="two">Image Two</li>
+            <li id="three">Image Three</li>
+            <li id="four">Image Four</li>
+         </ul>
+    </div>
+</body>
+<script>
+// This syntax gives less features
+    // document.getElementById('one').onclick = function(){
+    //     alert("One clicked")
+    // }
+
+
+
+// This syntax gives more features
+// document.getElementById('images').addEventListener('click', function(e){
+    // e-> event object
+//     console.log("clicked inside the ul");
+// }, false) //  click krenge ul elements pr like image one, image two, image three, image four to yeh code run hoga --"clicked inside the ul"
+// false ->is default value
+
+// document.getElementById('one').addEventListener('click', function(e){
+//     // e-> event object
+//     console.log("one image clicked");
+// }, false)  
+// image inside the ul --- output
+
+// event propagation:- bubblingum (jo hmari script track krri h bde elements ko inside to outside) ----- },false) --- it gives output when click on one image -"one image clicked" and "clicked inside the ul" in this order.
+
+//  capturing mode:- it goes from outside to inside (opposite of bubblingum). isme true denge last argument me }, true) to yeh capturing mode me chlega  it gves output "clicked inside the ul" and "one image clicked" 
+
+// ---------------------------------------------------------------
+// if we want to stop the propagation of event then we can use stopPropagation() method and this method we use with event object.stopPropagation() method is used to stop the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
+
+// document.getElementById('images').addEventListener('click', function(f){
+//     // f-> event object
+//     console.log("clicked inside the ul");
+// }, false) 
+
+// document.getElementById('two').addEventListener('click', function(f){
+//     // f-> event object
+//     console.log("two image clicked");
+//     f.stopPropagation();
+// }, false) 
+
+
+
+// --------------
+document.querySelector('#images').addEventListener('click', function(e){
+    // console.log(e.target);
+    // console.log(e.target.parentNode); //target toh  il gya h but uske parent ko select krna h to parentNode use krte h
+
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+     removeIt.remove()
+    }
+    
+}, false)
+
+</script>
+</html>
+
+
+
+
+<!--  
+attachEvent()
+jQuery - on
+-----------Learn Topics-----------
+type
+timestamp
+defaultPrevented
+target
+toElement
+srcElement
+currenttarget
+----------Interview related--------
+clientX
+clientY
+screenX
+screenY
+altKey
+ctrlKey
+shiftKey
+keycode
+
+
+
+-->
