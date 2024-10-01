@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Async</h1>
+    <button id="stop">stop</button>
+</body>
+
+
+<Script>
+
+    // ---setTimeout---
+
+    // setTimeout(function(){
+    //     console.log("Richa");
+    // }, 2000)
+
+
+    // ---setTimeout-----
+    const sayRicha = function(){
+        console.log("Richa");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Richa is the best"
+    }
+//  setTimeout(changeText, 2000)
+
+
+//  ----clearTimeout-----
+const changeMe = setTimeout(changeText, 2000)
+document.querySelector('#stop').addEventListener('click', function(){
+    clearTimeout(changeMe)
+    console.log("Stopped")
+})
+
+</Script>
+</html>
+
+<!-- 
+----browser ke part hote hain yeh method
+
+The setTimeout() method allows you to execute a piece of code after a certain amount of time has passed. You can think of the method as a way to set a timer to run JavaScript code at a certain time.
+setTimeout(function(){
+        console.log("Richa");
+    }, 2000)
+
+
+For example, the code below will print "Richa" to the JavaScript console after 2 seconds have passed:
+yeeh ek bar hi output dega 2 sec ke bd.
+
+
+The global clearTimeout() method cancels a timeout previously established by calling setTimeout().
+If the parameter provided does not identify a previously established action, this method does nothing.
+
+const changeMe = setTimeout(changeText, 2000)
+document.querySelector('#stop').addEventListener('click', function(){
+    clearTimeout(changeMe)
+    console.log("Stopped")
+})
+    when we click on stop button before 2 sec then it will not change the text that is written on the screen after 2 sec.
+    it give output:- Richa 
+
+-->
